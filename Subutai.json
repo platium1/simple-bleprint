@@ -12,18 +12,21 @@
       "hostname": "mattermost",
       "template": "mattermost@280dcda67a67d071970ff838d0331c33c0c04710",
       "peer-criteria": "mattermost",
-      "size": "SMALL"
+      "size": "SMALL",
+      "port-mapping": [
+        {
+          "protocol": "http",
+          "domain": "${domain2}",
+          "internal-port": "8065",
+          "external-port": "9090"
+        }
+      ]
     }
   ],
   "peer-criteria": [
     {
       "name": "HTTP-GROUP",
-      "max-price": "50",
-      "resource-availability": {
-        "avg-cpu-load": "50",
-        "min-free-ram": "128",
-        "min-free-disk-space": "10"
-      }
+      "max-price": "50"
     }
   ],
   "configuration": {
@@ -49,5 +52,13 @@
         ]
       }
     ]
+  },
+  "user-variables": {
+    "domain": {
+      "description": "Select your domain or create new one",
+      "type": "domain",
+      "default": "mattermost.envs.subutai.cloud",
+      "validation": "[a-zA-Z0-9.-]+"
+    }
   }
 }
