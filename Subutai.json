@@ -69,10 +69,10 @@
       "validation": "TINY,SMALL,MEDIUM,LARGE,HUGE"
     },
     "mattermostContainerType": {
-      "description": "You can set TINY,SMALL,MEDIUM,LARGE,HUGE",
+      "description": "You can set MEDIUM,LARGE,HUGE",
       "type": "enum",
       "default": "SMALL",
-      "validation": "TINY,SMALL,MEDIUM,LARGE,HUGE"
+      "validation": "MEDIUM,LARGE,HUGE"
     },
     "externalPort": {
       "description": "Enter xxxx  digit external port",
