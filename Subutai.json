@@ -75,13 +75,13 @@
       "validation": "TINY,SMALL,MEDIUM,LARGE,HUGE"
     },
     "externalPort": {
-      "description": "Enter external port",
+      "description": "Enter xxxx  digit external port",
       "type": "int",
       "default": "8080",
       "validation": "\\d+"
     },
   "maxPeersPrice": {
-      "description": "Enter max peer price",
+      "description": "Enter max price of peer you are looking for",
       "type": "int",
       "default": "8080",
       "validation": "\\d+"
