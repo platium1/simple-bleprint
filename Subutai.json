@@ -1,21 +1,53 @@
-					{
+{
   "name": "Training-Environment-Minimal",
   "description": "The minimal blueprint",
-  "containers": [ {
-      "hostname": "web-server",
-      "template": "apache",
-      "peer-criteria": "HTTP-GROUP",
-      "size": "MEDIUM"
+  "containers": [
+    {
+      "hostname": "mysql",
+      "template": "mysql@280dcda67a67d071970ff838d0331c33c0c04710",
+      "peer-criteria": "mattermost",
+      "size": "SMALL"
+    },
+    {
+      "hostname": "mattermost",
+      "template": "mattermost@280dcda67a67d071970ff838d0331c33c0c04710",
+      "peer-criteria": "mattermost",
+      "size": "SMALL"
     }
   ],
-  "peer-criteria": [ {
+  "peer-criteria": [
+    {
       "name": "HTTP-GROUP",
       "max-price": "50",
       "resource-availability": {
-	    "avg-cpu-load": "50",
-	    "min-free-ram": "128",
-	    "min-free-disk-space": "10"
-	}
+        "avg-cpu-load": "50",
+        "min-free-ram": "128",
+        "min-free-disk-space": "10"
+      }
     }
-  ]
+  ],
+  "configuration": {
+    "source-url": "https://github.com/platium/mattermost/archive/master.zip",
+    "ansible-playbook": "main.yml",
+    "arguments": [
+      {
+        "key": "key1",
+        "value": "value1"
+      }
+    ],
+    "groups": [
+      {
+        "name": "db",
+        "hostnames": [
+          "mysql"
+        ]
+      },
+      {
+        "name": "mattermost",
+        "hostnames": [
+          "mattermost"
+        ]
+      }
+    ]
+  }
 }
