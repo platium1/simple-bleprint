@@ -1,5 +1,5 @@
 {
-  "name": "Training-Environment-Minimal",
+  "name": "mattermost",
   "description": "The minimal blueprint",
   "version": "1.0.1",
   "author": "Sydyk",
@@ -17,10 +17,10 @@
       "size": "${mattermostContainerType}",
       "port-mapping": [
         {
-          "protocol": "http",
+          "protocol": "TCP",
           "domain": "${domain}",
           "internal-port": "8065",
-          "external-port": "9090"
+          "external-port": "${externalPort}"
         }
       ]
     }
@@ -28,11 +28,11 @@
   "peer-criteria": [
     {
       "name": "HTTP-GROUP",
-      "max-price": "50"
+      "max-price": "${maxPeersPrice}"
     }
   ],
   "configuration": {
-    "source-url": "https://github.com/platium/mattermost/archive/master.zip",
+    "source-url": "https://github.com/platium1/simple-bleprint/archive/master.zip",
     "ansible-playbook": "main.yml",
     "arguments": [
       {
@@ -73,6 +73,19 @@
       "type": "enum",
       "default": "SMALL",
       "validation": "TINY,SMALL,MEDIUM,LARGE,HUGE"
+    },
+    "externalPort": {
+      "description": "Enter external port",
+      "type": "int",
+      "default": "8080",
+      "validation": "\\d+"
+    },
+  "maxPeersPrice": {
+      "description": "Enter max peer price",
+      "type": "int",
+      "default": "8080",
+      "validation": "\\d+"
     }
+    
   }
 }
