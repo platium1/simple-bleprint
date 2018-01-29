@@ -17,7 +17,7 @@
       "size": "${mattermostContainerType}",
       "port-mapping": [
         {
-          "protocol": "TCP",
+          "protocol": "HTTP",
           "domain": "${domain}",
           "internal-port": "8065",
           "external-port": "${externalPort}"
