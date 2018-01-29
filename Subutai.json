@@ -1,5 +1,5 @@
 {
-  "name": "mattermost",
+ "name": "${environmentName}",
   "description": "The minimal blueprint",
   "version": "1.0.1",
   "author": "Sydyk",
@@ -85,6 +85,12 @@
       "type": "int",
       "default": "8080",
       "validation": "\\d+"
+    },
+        "environmentName": {
+      "description": "Enter your environment name",
+      "type": "string",
+      "default": "mattermost env",
+      "validation": "[a-zA-Z0-9]+"
     }
     
   }
