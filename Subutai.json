@@ -5,13 +5,13 @@
     {
       "hostname": "mysql",
       "template": "mysql@280dcda67a67d071970ff838d0331c33c0c04710",
-      "peer-criteria": "mattermost",
+      "peer-criteria": "HTTP-GROUP",
       "size": "SMALL"
     },
     {
       "hostname": "mattermost",
       "template": "mattermost@280dcda67a67d071970ff838d0331c33c0c04710",
-      "peer-criteria": "mattermost",
+      "peer-criteria": "HTTP-GROUP",
       "size": "SMALL",
       "port-mapping": [
         {
