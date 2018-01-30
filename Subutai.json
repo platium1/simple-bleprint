@@ -1,6 +1,6 @@
 {
   "name": "${envName}",
-  "description": "The minimal blueprint",
+  "description": "mattermost",
   "version": "1.0.1",
   "author": "Sydyk",
   "containers": [
@@ -20,7 +20,7 @@
           "protocol": "HTTP",
           "domain": "${domain}",
           "internal-port": "8065",
-          "external-port": "${externalPort}"
+          "external-port": "80"
         }
       ]
     }
@@ -73,12 +73,6 @@
       "type": "enum",
       "default": "SMALL",
       "validation": "MEDIUM,LARGE,HUGE"
-    },
-    "externalPort": {
-      "description": "Enter xxxx  digit external port",
-      "type": "int",
-      "default": "8080",
-      "validation": "\\d+"
     },
     "maxPeersPrice": {
       "description": "Enter max price of peer you are looking for",
