@@ -13,7 +13,7 @@
     {
       "hostname": "mattermost",
       "template": "mattermost@280dcda67a67d071970ff838d0331c33c0c04710",
-      "peer-criteria": "HTTP-GROUP",
+      "peer-criteria": "HTTP-GROUP1",
       "size": "${mysqlDBtype}",
       "port-mapping": [
         {
@@ -28,6 +28,10 @@
   "peer-criteria": [
     {
       "name": "HTTP-GROUP",
+      "max-price": "${maxPeersPrice}"
+    },
+    {
+      "name": "HTTP-GROUP1",
       "max-price": "${maxPeersPrice}"
     }
   ],
