@@ -14,14 +14,7 @@
       "hostname": "ubuntu162",
       "template": "ubuntu16",
       "peer-criteria": "HTTP-GROUP",
-      "size": "${wordpressContainerType}",
-      "port-mapping": [
-        {
-          "protocol": "HTTP",
-          "domain": "${domain}",
-          "internal-port": "80",
-          "external-port": "80"
-        }
+      "size": "${wordpressContainerType}"
       ]
     }
   ],
