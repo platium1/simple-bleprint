@@ -15,7 +15,7 @@
       "template": "ubuntu16",
       "peer-criteria": "HTTP-GROUP",
       "size": "${wordpressContainerType}"
-      ]
+     
     }
   ],
   "peer-criteria": [
