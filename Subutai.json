@@ -6,7 +6,7 @@
   "containers": [
     {
       "hostname": "ubutnu161",
-      "template": "debian-stretch",
+      "template": "ubuntu16",
       "peer-criteria": "HTTP-GROUP",
       "size": "${mysqlDBtype}"
     }
